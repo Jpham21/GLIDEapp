@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLIDE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-toolbar">
+        <button onclick="loadPorts()">Refresh Ports</button>
+    </div>
+    <div id="main-area">
+        <div id="left-panel">
+            <div id="editor-panel">
+                <div id="arduino-connection-toolbar">
+                    <button onclick="connectToArduino()">Connect</button>
+                    <button onclick="disconnectArduino()">Disconnect</button>
+                    <select id="port-selector">
+                        <!-- Port options will be populated here -->
+                    </select>
+                    <span id="connection-status">Not connected</span>
+                </div>
+                <!-- Additional content for the editor panel -->
+            </div>
+            <div id="console-panel">
+                <!-- Console output will appear here -->
+            </div>
+        </div>
+        <div id="right-sidebar">
+            <!-- Tabs and content for environment, history, etc. -->
+            <div id="environment-tab">Environment Info</div>
+            <div id="history-tab">Session History</div>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
